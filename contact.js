@@ -1,1 +1,11 @@
-document.addEventListener('DOMContentLoaded',()=>{const form=document.getElementById('contactForm');if(!form)return;form.addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('name').value.trim();const email=document.getElementById('email').value.trim();const message=document.getElementById('message').value.trim();const to='agsapurvsh@gmail.com';const subject=encodeURIComponent('Portfolio enquiry from '+name);const body=encodeURIComponent(message+'\n\n'+name+' ('+email+')');window.location.href=`mailto:${to}?subject=${subject}&body=${body}`;});});
+document.addEventListener('DOMContentLoaded',()=>{const form=document.getElementById('contactForm');
+                                                  if(!form)return;form.addEventListener('submit',e=>{e.preventDefault();
+                                                                                                     const name=document.getElementById('name').value.trim();
+                                                                                                     const email=document.getElementById('email').value.trim();
+                                                                                                     const message=document.getElementById('message').value.trim();
+                                                                                                     const to='agsapurvsh@gmail.com';
+                                                                                                     const subject=encodeURIComponent('Portfolio enquiry from '+name);
+                                                                                                     const body=encodeURIComponent(message+'\n\n'+name+' ('+email+')');
+                                                                                                     window.location.href=`mailto:${to}?subject=${subject}&body=${body}`;
+                                                                                                    });
+                                                 });
